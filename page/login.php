@@ -24,6 +24,10 @@
 			
 			
 			//kontrollin, et parool ei ole tühi
+			if($email_error == "" && $password_error ==""){
+				
+				echo "kontrollin sisselogimist ".$email." ja parool ";
+			}
 			if(empty($_POST["password"]) ){
 			$password_error = "See väli on kohustuslik";	
 			} else {
@@ -62,7 +66,9 @@
 		
 		}	
 		//kontrollin, et parool ei ole tühi
+		// kontrollin et ei oleks ühtegi errorit
 		
+			
 	}	
 	
 	function test_input($data) {
@@ -74,11 +80,9 @@
 		}
 		
 ?>
-<?php 
- $page_title = "Sisselogimise leht";
-    $page_file_name = "login.php";
-	?>
+
 <?php require_once("../header.php"); ?>
+
     <h2>Registreeri!</h2>
 
 <form id='register' action='login.php' method='post'
@@ -113,6 +117,6 @@
 	
 	
 <h1>Pealkiri - teemale</h1>
-<p>alltekst,mis toimuma hakkab.</p>
+<p>Siia leheküljele soovin luua <i>wannabe</i> Twitteri. See <i>wannabe</i> Twitter edastaks inimeste mõtteid IT alaselt. Inimesed saavad postitada oma mõtteid IT valdkonnast ja kuidas muuta keskkonda paremaks. Huvitavad teemad ja postitused mille üle mõelda.</p>
 
 <?php require_once("../footer.php"); ?>
