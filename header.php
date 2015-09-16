@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Page title</title>
+	<title><?php echo $page_title; ?></title>
 	<style>
 	body {background-color:lightblue}
 	h1   {color:black}

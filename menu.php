@@ -1,10 +1,21 @@
-<h2>Menüü<h2>
+
+<h2>Menüü</h2>
 <ul>
-    <li>
-	<a href="home.php">Home</a>
-	</li>
-	<br>
+<?php if ($page_file_name == "home.php") { ?>
 	<li>
-	<a href="login.php">Login</a>
+		Home
 	</li>
+<?php } else { ?>	
+	<li>
+		<a href="home.php">Home</a>
+	</li>
+	<?php } ?>
+
+<?php 	
+		if ($page_file_name == "login.php") {
+				echo '<li>login</li>';
+			} else {
+				echo '<li><a href="login.php">login</a></li>';
+		}
+?>
 </ul>
