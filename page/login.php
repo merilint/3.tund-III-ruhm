@@ -43,7 +43,7 @@
 <?php require_once("../header.php"); ?>
     <h2>Registreeri!</h2>
 
-<form id='register' action='register.php' method='post'
+<form id='register' action='login.php' method='post'
     accept-charset='UTF-8'>
 <fieldset >
 <legend>Registreeri!</legend>
